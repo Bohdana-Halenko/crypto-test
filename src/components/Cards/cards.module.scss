@@ -1,0 +1,354 @@
+@import "../../variables.scss";
+
+.decorative_elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .circle_bottom_left {
+        width: 923px;
+        height: 581px;
+        background: linear-gradient(0deg, rgba(87, 87, 87, 0.23), rgba(87, 87, 87, 0.23));
+        filter: blur(100px);
+        border-radius: 2.71815e+07px;
+        transform: rotate(157.5deg);
+
+        position: absolute;
+        bottom: -80%;
+        left: -5%;
+    }
+}
+
+.cards_wrapper {
+    width: 100%;
+    position: relative;
+    margin-bottom: 112px;
+    display: grid;
+    grid-template-rows: 358px 303px;
+    grid-template-columns: 1fr 27.5% 27.5%;
+    gap: 30px;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    grid-template-areas:
+        "tradePairs contracts prize"
+        "tradePairs trade trade";
+
+    & .small_card:nth-child(3) {
+        grid-area: contracts;
+    }
+
+    & .small_card:nth-child(4) {
+        grid-area: prize;
+    }
+
+    @media (max-width: 960px) {
+        grid-template-rows: 337px 337px 290px;
+        grid-template-columns: 55% 1fr;
+
+        grid-template-areas:
+            "tradePairs contracts"
+            "tradePairs prize"
+            "trade trade";
+    }
+
+    @media (max-width: 680px) {
+        grid-template-rows: 476px 304px 304px 426px;
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "tradePairs"
+            "contracts"
+            "prize"
+            "trade";
+    }
+
+    @media (max-width: 540px) {
+        margin-bottom: 20px;
+    }
+}
+
+.card {
+    background: #0A0A0D;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgb(170, 170, 179);
+    border-radius: 46px;
+    padding: 30px;
+    transition: .4s ease-in-out !important;
+
+    &:hover {
+        background: #1e1e1e;
+        transform: rotateY(25deg) scale(1.05) scaleX(1.07);
+        box-shadow: -2px 2px 2px 2px rgb(177, 177, 177);
+    }
+
+    @media (max-width: 1080px) {
+        padding: 30px 25px;
+    }
+
+    @media (max-width: 680px) {
+        padding: 30px;
+    }
+}
+
+.small_card {
+    position: relative;
+    overflow: hidden;
+
+    .circle_bottom_right {
+        width: 251px;
+        height: 265px;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.07) 0%, rgba(196, 196, 196, 0) 100%);
+
+        position: absolute;
+        bottom: -35%;
+        right: -30%;
+    }
+
+    .title {
+        margin-bottom: 60px;
+
+        @media (max-width: 960px) {
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 680px) {
+            margin-bottom: 35px;
+        }
+    }
+
+    .headline {
+        max-width: 215px;
+        margin-bottom: 65px;
+
+        @media (max-width: 960px) {
+            margin-bottom: 55px;
+        }
+
+        @media (max-width: 680px) {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.big_card {
+    position: relative;
+    grid-area: tradePairs;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    & div:first-child {
+        position: relative;
+        height: 320px;
+
+        @media (max-width: 680px) {
+            order: 2;
+        }
+
+        .circle_top_left {
+            width: 257px;
+            height: 167px;
+            background: rgba(47, 47, 45, 0.8);
+            filter: blur(97px);
+
+            position: absolute;
+            top: -20%;
+            left: -30%;
+        }
+
+        img {
+            position: absolute;
+            top: -9%;
+            left: -7%;
+            max-width: 115%;
+
+            @media (max-width: 960px) {
+                max-width: 200%;
+                width: 115%;
+            }
+
+            @media (max-width: 680px) {
+                width: 600px;
+                left: -5%;
+                top: -35%;
+            }
+
+            @media (max-width: 420px) {
+                width: 340px;
+                top: -60%;
+            }
+        }
+    }
+
+    & div:last-child {
+        position: relative;
+
+        .circle_bottom_right {
+            width: 257px;
+            height: 167px;
+            background: rgba(47, 47, 45, 0.8);
+            filter: blur(97px);
+
+            position: absolute;
+            bottom: -30%;
+            right: -20%;
+        }
+    }
+
+    .title {
+        margin-bottom: 61px;
+    }
+
+    .headline {
+        margin-bottom: 90px;
+        font-size: 40px;
+        line-height: 120%;
+        max-width: 300px;
+
+        @media (max-width: 1080px) {
+            font-size: 36px;
+        }
+
+        @media (max-width: 680px) {
+            max-width: initial;
+        }
+    }
+}
+
+.large_card {
+    display: flex;
+    justify-content: space-between;
+    grid-area: trade;
+    position: relative;
+    overflow: hidden;
+
+    & div:nth-child(2) {
+        position: relative;
+        width: 280px;
+
+        @media (max-width: 680px) {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        img {
+            position: absolute;
+            top: -20%;
+            left: -7%;
+            width: 118%;
+            max-width: 150%;
+
+            @media (max-width: 680px) {
+                width: 550px;
+                top: initial;
+                left: initial;
+                bottom: -5%;
+                right: -40%;
+            }
+
+            @media (max-width: 540px) {
+                width: 390px;
+                right: -37%;
+            }
+
+            @media (max-width: 480px) {
+                width: 340px;
+                right: -32%;
+            }
+        }
+    }
+
+    .circle_top_left {
+        width: 374px;
+        height: 73px;
+        background: rgba(47, 47, 45, 0.8);
+        filter: blur(97px);
+
+        position: absolute;
+        top: -15%;
+        left: -5%;
+    }
+
+    .circle_bottom_right {
+        width: 206px;
+        height: 175px;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.07) 0%, rgba(196, 196, 196, 0) 100%);
+        opacity: 0.68;
+
+        position: absolute;
+        bottom: -22%;
+        right: -11%;
+    }
+
+    .title {
+        margin-bottom: 61px;
+
+        @media (max-width: 960px) {
+            margin-bottom: 55px;
+        }
+
+        @media (max-width: 680px) {
+            margin-bottom: 35px;
+        }
+    }
+
+    .headline {
+        margin-bottom: 53px;
+        max-width: 225px;
+
+        @media (max-width: 960px) {
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 680px) {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.title {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $grey;
+}
+
+.headline {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 43px;
+    color: $basicWhite;
+
+    @media (max-width: 1080px) {
+        font-size: 26px;
+    }
+}
+
+.link {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: $grey;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        color: #7B93FF
+    }
+}
+
+.word200 {
+    font-weight: 600;
+    background: linear-gradient(89.95deg, #487FFF -1.65%, #73B5FF 51.06%, #CB76FF 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.fw500 {
+    font-weight: 600;
+}

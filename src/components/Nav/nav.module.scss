@@ -1,0 +1,176 @@
+@import "../../variables.scss";
+
+.decorative_elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  .circle_top_left {
+    width: 742px;
+    height: 597px;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 255, 255, 0.09) 0%,
+      rgba(196, 196, 196, 0) 100%
+    );
+
+    position: absolute;
+    top: -200%;
+    left: -50%;
+
+    @media (max-width: 540px) {
+      display: none;
+    }
+  }
+
+  .circle_bottom_right {
+    width: 742px;
+    height: 597px;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 255, 255, 0.09) 0%,
+      rgba(196, 196, 196, 0) 100%
+    );
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    position: absolute;
+    right: -40%;
+    bottom: -450%;
+
+    @media (max-width: 540px) {
+      bottom: -600%;
+    }
+  }
+}
+
+nav {
+  padding: 37px 0px;
+  display: flex;
+  position: relative;
+}
+
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  flex-grow: 1;
+}
+
+.navbar {
+  color: $white;
+  display: flex;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+
+  @media (max-width: 767px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    opacity: 0;
+
+    &.active {
+      width: 100%;
+      min-height: 50vh;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px 40px;
+      opacity: 1;
+    }
+  }
+}
+
+.link {
+  margin-right: 45px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    color: $blue;
+  }
+
+  @media (max-width: 767px) {
+    margin-right: 0;
+    padding: 20px 0;
+  }
+}
+
+.logo {
+  color: $white;
+  font-size: 25px;
+
+  @media (max-width: 960px) {
+    font-size: 23px;
+  }
+}
+
+.button {
+  padding: 18px 40px;
+  background: linear-gradient(140.6deg, $basicWhite -27.18%, #dedede 126.06%);
+  box-shadow: 0px 0px 49px rgba(42, 7, 254, 0.4);
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+
+  svg {
+    margin-left: 13px;
+  }
+
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 960px) {
+    padding: 14px 35px;
+  }
+  @media (max-width: 767px) {
+    margin-top: 20px;
+  }
+}
+
+.burger {
+  padding: 15px;
+  padding-right: 0;
+  cursor: pointer;
+  width: fit-content;
+  position: relative;
+  z-index: 6;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  & div:first-child {
+    margin-bottom: 8px;
+
+    &.active {
+      position: absolute;
+      transform: rotate(45deg);
+    }
+  }
+
+  & div:last-child {
+    &.active {
+      transform: rotate(-45deg);
+    }
+  }
+
+  div {
+    width: 32px;
+    height: 2px;
+    background: $basicWhite;
+    transition: 0.2s ease-in-out;
+  }
+}

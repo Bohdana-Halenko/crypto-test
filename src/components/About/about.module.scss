@@ -1,0 +1,230 @@
+@import '../../variables.scss';
+
+.decorative_elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .circle_top_right,
+    .circle_bottom_left {
+        width: 1186px;
+        height: 704px;
+        background: linear-gradient(180deg, rgba(0, 65, 218, 0.115) 0%, rgba(40, 0, 153, 0.115) 91.72%);
+        filter: blur(100px);
+        border-radius: 100%;
+        transform: rotate(131.65deg);
+
+        position: absolute;
+    }
+
+    .circle_top_right {
+        top: -50%;
+        right: -55%;
+
+        @media (max-width: 540px) {
+            top: 30%;
+            right: 20%;
+        }
+    }
+
+    .circle_bottom_left {
+        bottom: -50%;
+        left: -55%;
+
+        @media (max-width: 540px) {
+            top: 100%;
+            left: 10%;
+        }
+    }
+
+    img {
+        position: absolute;
+        max-width: initial;
+        top: 0;
+        right: -58%;
+        z-index: -1;
+
+        @media (max-width: 768px) {
+            right: -150%;
+        }
+
+        @media (max-width: 540px) {
+            right: -200%;
+        }
+
+        @media (max-width: 480px) {
+            right: -358%;
+        }
+    }
+}
+
+.about_wrapper {
+    margin-bottom: 180px !important;
+    position: relative;
+
+    @media (max-width: 540px) {
+        margin-bottom: 120px !important;
+    }
+}
+
+.headline_container {
+    margin-bottom: 65px;
+
+    @media (max-width: 960px) {
+        margin-bottom: 45px;
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: 30px;
+    }
+
+    .headline {
+        padding-top: 130px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $grey;
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: $basicWhite;
+        text-align: center;
+
+        @media (max-width: 960px) {
+            font-size: 36px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 44px;
+        }
+    }
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.content {
+    max-width: 360px;
+    margin-right: 90px;
+
+    &_title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 43px;
+        color: $basicWhite;
+        margin-bottom: 33px;
+
+        @media (max-width: 960px) {
+            font-size: 28px;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        margin-right: 40px;
+    }
+
+    @media (max-width: 840px) {
+        margin-right: 0px;
+    }
+}
+
+.list {
+    // list-style-type: none;
+    margin-bottom: 44px;
+    padding-left: 20px;
+
+    li {
+        font-weight: 400;
+        line-height: 21px;
+        color: #E9E9E9;
+        margin-bottom: 26px;
+        padding-left: 10px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            top: -7px;
+            left: -33px;
+        }
+    }
+
+    & li:nth-child(1) {
+        &::before {
+            content: url("../../img/blueArrow.svg");
+        }
+    }
+
+    & li:nth-child(2) {
+        &::before {
+            content: url("../../img/pinkArrow.svg");
+        }
+    }
+
+    .something {
+        box-shadow: 0px 4px 12px rgba(42, 7, 254, 0.7);
+    }
+
+    .something2 {
+        box-shadow: 0px 4px 12px rgba(255, 43, 119, 0.7);
+    }
+}
+
+.button {
+    padding: 20px 60px;
+    color: $basicWhite;
+    background: linear-gradient(140.6deg, #3E6FF9 -27.18%, #3E53F8 126.06%);
+    box-shadow: 0px 0px 49px rgba(42, 7, 254, 0.4);
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: capitalize;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    transition: .4s ease-in-out;
+
+    &:before {
+        content: '';
+        width: 80px;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        position: absolute;
+        transition: .4s linear;
+        left: 0;
+        top: 0;
+        transform: skew(-35deg) translateX(-100px);
+    }
+
+    &:hover:before {
+        transform: skew(-35deg) translateX(400px);
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 960px) {
+        padding: 14px 45px;
+    }
+
+    @media (max-width: 420px) {
+        font-size: 16px;
+    }
+}

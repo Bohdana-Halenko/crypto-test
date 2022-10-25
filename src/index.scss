@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Mazzard';
+  font-weight: 400;
+  src: local('Mazzard'), url(fonts/Mazzard/MazzardH-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  font-weight: 500;
+  src: local('Mazzard'), url(fonts/Mazzard/MazzardH-Medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  font-weight: 600;
+  src: local('Mazzard'), url(fonts/Mazzard/MazzardH-SemiBold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  font-weight: 700;
+  src: local('Mazzard'), url(fonts/Mazzard/MazzardH-Bold.woff) format('woff');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Mazzard', sans-serif;
+  font-size: 18px;
+  background: #000;
+  overflow-x: hidden;
+
+  @media (max-width: 960px) {
+    font-size: 16px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  border: 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1170px;
+  margin: auto;
+
+  @media (max-width: 1240px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

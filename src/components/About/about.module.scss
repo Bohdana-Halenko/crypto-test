@@ -197,27 +197,11 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
-
     transition: .4s ease-in-out;
-
-    &:before {
-        content: '';
-        width: 80px;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.2);
-        position: absolute;
-        transition: .4s linear;
-        left: 0;
-        top: 0;
-        transform: skew(-35deg) translateX(-100px);
-    }
-
-    &:hover:before {
-        transform: skew(-35deg) translateX(400px);
-    }
 
     &:hover {
         transform: scale(1.05);
+        box-shadow: none;
     }
 
     @media (max-width: 960px) {

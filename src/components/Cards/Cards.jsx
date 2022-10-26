@@ -6,7 +6,7 @@ import Art from '../../img/art.svg';
 export default function Cards() {
   return (
     <div style={{overflow: 'hidden', marginTop: '180px'}}>
-      <div className={`wrapper ${styles.cards_wrapper}`} data-aos="zoom-in">
+      <div className={`wrapper ${styles.cards_wrapper}`}  data-aos="flip-down">
         <div className={styles.decorative_elements}>
           <div className={styles.circle_bottom_left}></div>
         </div>

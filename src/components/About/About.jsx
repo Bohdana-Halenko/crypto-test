@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './about.module.scss';
+import Diagram from './Diadram/Diagram';
 import Circle from '../../img/big_circle.svg';
-import Chart from '../../img/chart.png';
 
 export default function About() {
   return (
@@ -17,7 +17,7 @@ export default function About() {
       </div>
 
       <div className={styles.container}>
-        <img src={Chart} alt="chart" />
+        <Diagram />
         <div className={styles.content} data-aos="fade-left">
           <p className={styles.content_title}>Level 1</p>
           <ul className={styles.list}>

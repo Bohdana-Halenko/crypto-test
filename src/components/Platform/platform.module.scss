@@ -64,7 +64,6 @@
 
     @media (max-width: 1240px) {
         flex-direction: column;
-        // align-items: flex-start;
     }
 
     @media (max-width: 540px) {
@@ -556,5 +555,9 @@
         color: #7B93FF;
         cursor: pointer;
         padding: 5px 0;
+
+        &:hover{
+           color: #AAAAAA;
+        }
     }
 }

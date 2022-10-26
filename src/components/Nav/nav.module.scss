@@ -74,7 +74,7 @@ nav {
     &.active {
       width: 100%;
       min-height: 50vh;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.9);
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -104,6 +104,10 @@ nav {
   color: $white;
   font-size: 25px;
 
+  &:hover{
+    transform: scale(1.3);
+  }
+
   @media (max-width: 960px) {
     font-size: 23px;
   }
@@ -112,8 +116,9 @@ nav {
 .button {
   padding: 18px 40px;
   background: linear-gradient(140.6deg, $basicWhite -27.18%, #dedede 126.06%);
-  box-shadow: 0px 0px 49px rgba(42, 7, 254, 0.4);
   border-radius: 10px;
+  box-shadow: $boxShadow;
+
 
   display: flex;
   align-items: center;

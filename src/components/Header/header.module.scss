@@ -37,6 +37,7 @@ header {
         padding-top: 80px;
         padding-bottom: 55px;
         position: relative;
+        margin-bottom: 0px;
 
         @media (max-width: 960px) {
             padding-top: 30px;
@@ -46,15 +47,21 @@ header {
         @media (max-width: 768px) {
             max-width: 620px;
             width: 100%;
-            margin-bottom: 80px;
+            // margin-bottom: 180px;
         }
 
         @media (max-width: 620px) {
             max-width: 540px;
+            // margin-bottom: 100px;
         }
 
-        @media (max-width: 540px) {
-            margin-bottom: 40px;
+                @media (max-width: 540px) {
+                    margin-bottom: 150px;
+                    padding-left: 28px;
+                    padding-right: 28px;
+                }
+        @media (max-width: 390px) {
+            margin-bottom: 100px;
         }
     }
 }
@@ -129,10 +136,6 @@ header {
         margin-bottom: 20px;
         font-weight: 500;
     }
-
-    @media (max-width: 479px) {
-        font-size: 42px;
-    }
 }
 
 .span_blue {
@@ -148,6 +151,7 @@ header {
     font-size: 26px;
     line-height: 30px;
     color: $darkWhite;
+    max-width: 640px;
 
     @media (max-width: 960px) {
         font-size: 22px;
@@ -170,19 +174,41 @@ header {
     top: 128px;
     right: -223px;
     z-index: -1;
+    background-position: right;
+
+    @media (max-width: 1224px) {
+            top: 20%;
+        }
 
     @media (max-width: 1024px) {
-        width: 65%;
+        width: 700px;
+        top: 40%;
     }
 
     @media (max-width: 960px) {
-        width: 70%;
-        top: 85%;
+        top: 70%;
     }
 
     @media (max-width: 768px) {
-        width: 500px;
+        top: 80%;
     }
+    @media (max-width: 540px) {
+        width: 120%;
+        top: 90%;
+    }
+    @media (max-width: 480px) {
+        min-width: 110%;
+        top: 90%;
+    }
+    @media (max-width: 400px) {
+        min-width: 130%;
+        top: 90%;
+    }
+     @media (max-width: 360px) {
+            width: 150%;
+            top: 85%;
+            left: 20%;
+        }
 }
 
 .button {

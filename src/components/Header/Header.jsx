@@ -20,8 +20,8 @@ export default function Header() {
             Engineers meet <span className={styles.span_blue}>Traders <sub>&ndash;</sub></span>
           </p>
           <p className={styles.text}>
-            Advanced crypto algorithmic trading and efficient<br /> 
-            cross-chain execution, at scale.
+            Advanced crypto algorithmic trading and efficient
+            cross-chain execution, at scale. 
           </p>
         </div>  
         <button className={styles.button}>

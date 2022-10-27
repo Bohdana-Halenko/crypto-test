@@ -57,17 +57,26 @@
 }
 
 .digitalWrapper {
+    max-width: 1440px;
     display: flex;
+    justify-content: space-between;
+    margin: auto;
+    // justify-content: center;
     align-items: center;
-    margin-bottom: 258px;
+    // margin-bottom: 258px;
     position: relative;
+    padding-left: 70px;
+    padding-right: 70px;
 
     @media (max-width: 1240px) {
         flex-direction: column;
     }
 
     @media (max-width: 540px) {
+       flex-direction: column;
         margin-bottom: 160px;
+        padding-left: 28px;
+            padding-right: 28px;
     }
 }
 
@@ -80,6 +89,8 @@
     position: relative;
 
     @media (max-width: 1240px) {
+        // margin-right: 20px;
+        // width: 50%;
         order: 2;
         margin-right: 0;
     }
@@ -496,6 +507,10 @@
     color: $basicWhite;
     font-weight: 400;
 
+    @media (max-width: 1280px) {
+            max-width: 340px;
+        }
+
     @media (max-width: 1240px) {
         max-width: initial;
         margin-bottom: 40px;
@@ -556,8 +571,8 @@
         cursor: pointer;
         padding: 5px 0;
 
-        &:hover{
-           color: #AAAAAA;
+        &:hover {
+            color: #AAAAAA;
         }
     }
 }

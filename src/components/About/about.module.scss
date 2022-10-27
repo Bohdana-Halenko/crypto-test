@@ -58,11 +58,13 @@
 }
 
 .about_wrapper {
+    max-width: 1440px;
     margin-bottom: 180px !important;
     position: relative;
 
     @media (max-width: 540px) {
         margin-bottom: 120px !important;
+        margin-top: 78px;
     }
 }
 
@@ -103,6 +105,9 @@
         @media (max-width: 480px) {
             font-size: 44px;
         }
+        @media (max-width: 390px) {
+            font-size: 38px;
+        }
     }
 }
 
@@ -115,6 +120,10 @@
     @media (max-width: 768px) {
         flex-direction: column;
     }
+         @media (max-width: 320px) {
+             padding-right: 0;
+             padding-left: 0;
+         }
 }
 
 .content {

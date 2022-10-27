@@ -12,7 +12,7 @@ export default function Nav() {
       </div>
       <div className={styles.nav_container}>
         <a href='/#' className={`${styles.link} ${styles.logo}`}>C</a>
-        <div className={burgerActive ? `${styles.navbar} ${styles.active}` : styles.navbar}>
+        <div className={burgerActive ? `${styles.navbar} ${styles.active}` : styles.navbar} >
           <a href="#activities" className={styles.link}>activities</a>
           <a href="#technology" className={styles.link}>technology</a>
           <a href="#r&d" className={styles.link}>R&D</a>

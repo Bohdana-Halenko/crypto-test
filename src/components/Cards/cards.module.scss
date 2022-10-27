@@ -20,15 +20,17 @@
 }
 
 .cards_wrapper {
-    width: 100%;
+    max-width: 1440px;
     position: relative;
-    margin-bottom: 112px;
+    padding-left: 63px;
+    padding-right: 63px;
     display: grid;
     grid-template-rows: 358px 303px;
     grid-template-columns: 1fr 27.5% 27.5%;
     gap: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
+    margin: auto auto 160px auto;
 
     grid-template-areas:
         "tradePairs contracts prize"
@@ -51,6 +53,10 @@
             "tradePairs prize"
             "trade trade";
     }
+        @media (max-width: 768px) {
+            padding-left: 28px;
+            padding-right: 28px;
+        }
 
     @media (max-width: 680px) {
         grid-template-rows: 476px 304px 304px 426px;
@@ -66,6 +72,11 @@
     @media (max-width: 540px) {
         margin-bottom: 20px;
     }
+        
+    // @media (max-width: 320px) {
+    //         padding-left: 28px;
+    //         padding-right: 28px;
+    //     }
 }
 
 .card {
@@ -203,6 +214,9 @@
         @media (max-width: 680px) {
             max-width: initial;
             margin-bottom: 35px;
+        }
+        @media (max-width: 320px) {
+            font-size: 32px;
         }
     }
 }

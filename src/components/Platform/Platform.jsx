@@ -3,7 +3,7 @@ import styles from './platform.module.scss'
 
 export default function Platform() {
   return (
-    <div className={`wrapper ${styles.digitalWrapper}`}>
+    <div className={styles.digitalWrapper}>
         <div className={styles.decorative_elements}>
           <div className={styles.circle_top_right}></div>
           <div className={styles.circle_bottom_left}></div>

@@ -17,7 +17,7 @@ export default function Header() {
         <div className={styles.content}>
           <h1 className={styles.topic}>crypto trading</h1>
           <p className={styles.headline}>
-            Engineers meet <span className={styles.span_blue}>Traders <sub>&ndash;</sub></span>
+            Engineers meet <span className={styles.span_blue}> <br /> Traders <sub>&ndash;</sub></span>
           </p>
           <p className={styles.text}>
             Advanced crypto algorithmic trading and efficient

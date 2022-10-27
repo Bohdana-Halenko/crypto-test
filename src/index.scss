@@ -13,7 +13,7 @@ body {
   font-family: 'Mazzard', sans-serif;
   font-size: 18px;
   overflow-x: hidden;
-  background: linear-gradient(180deg, #000 7%, #1c1919 35%, #15151c 52%, #000);
+  background: #000;
 
   @media (max-width: 960px) {
     font-size: 16px;
@@ -36,8 +36,8 @@ img {
 }
 
 .wrapper {
-  width: 100%;
-  // max-width: 1440px;
+  // width: 100%;
+  max-width: 1440px;
   padding-left: 70px;
   padding-right: 70px;
   margin: auto;

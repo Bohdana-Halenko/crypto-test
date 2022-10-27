@@ -8,7 +8,8 @@ export default function Platform() {
           <div className={styles.circle_top_right}></div>
           <div className={styles.circle_bottom_left}></div>
           <div className={styles.ellipse}></div>
-        </div>
+      </div>
+      
 
         <div className={styles.blockSchema_container} data-aos="fade-right">
           <div className={ `${styles.blur} ${styles.first_cont}` }>
@@ -83,6 +84,8 @@ export default function Platform() {
               <p>Consumers</p>
             </div>
           </div>
+        
+          
 
         </div>
         <div className={styles.content} data-aos="fade-left">

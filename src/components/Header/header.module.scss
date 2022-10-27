@@ -60,9 +60,12 @@ header {
                     padding-left: 28px;
                     padding-right: 28px;
                 }
-        @media (max-width: 390px) {
-            margin-bottom: 100px;
-        }
+        // @media (max-width: 390px) {
+        //     margin-bottom: 100px;
+        // }
+                @media (max-width: 350px) {
+                    margin-bottom: 100px;
+                }
     }
 }
 
@@ -81,6 +84,7 @@ header {
 
     @media (max-width: 540px) {
         margin-bottom: 40px;
+        margin-top: 20px;
     }
 }
 
@@ -177,12 +181,16 @@ header {
     background-position: right;
 
     @media (max-width: 1224px) {
+        width: 700px;
             top: 20%;
+            left: 700px;
         }
 
     @media (max-width: 1024px) {
         width: 700px;
         top: 40%;
+        left: 520px;
+        // vertical-align: middle;
     }
 
     @media (max-width: 960px) {
@@ -191,14 +199,17 @@ header {
 
     @media (max-width: 768px) {
         top: 80%;
+        left: 350px;
     }
     @media (max-width: 540px) {
         width: 120%;
         top: 90%;
+        left: 200px;
     }
     @media (max-width: 480px) {
         min-width: 110%;
         top: 90%;
+        left: 150px;
     }
     @media (max-width: 400px) {
         min-width: 130%;
